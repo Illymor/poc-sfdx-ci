@@ -14,7 +14,7 @@ jobs:
       run: |
         echo "coucou" > coucou.txt
         git add .
-    - name: Commit files
+    - name: Commit files :)
       run: |
         git config --local user.email "corentin.romilly@gmail.com"
         git config --local user.name "illymor"
