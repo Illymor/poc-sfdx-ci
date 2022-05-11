@@ -12,7 +12,7 @@ jobs:
         fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
     - name: Create local changes
       run: |
-        echo "{'username':'fake2@user.com'}" > config/so.json
+        echo '{"username":"fake2@user.com"}' > config/so.json
         git add .
     - name: Commit files :)
       run: |
