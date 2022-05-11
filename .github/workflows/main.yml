@@ -10,11 +10,9 @@ jobs:
     steps:
       - name: Set the value
         id: step_one
-        run: echo "action_state=yellow" >> $GITHUB_ENV
+        run: UPDATE='hello'
+          echo "${UPDATE}" > hello.txt
 
-      - name: Use the value
-        id: step_two
-        run: echo "${{ env.action_state }}" # This will output 'yellow'
  #     - uses: actions/checkout@v2              
  #     - name: Install Salesforce CLI
  #       run: |
