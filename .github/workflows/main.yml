@@ -32,11 +32,11 @@ jobs:
     - name: Echo so.json
       run: echo "${{ steps.package.outputs.content }}"
     - name: Read so json file
-        id: reading
-        uses: notiz-dev/github-action-json-property@release
-        with: 
-          path: './config/so.json'
-          username_path: 'username'
+      id: reading
+      uses: notiz-dev/github-action-json-property@release
+      with: 
+        path: './config/so.json'
+        username_path: 'username'
     - run: echo ${{steps.reading.outputs.username}} 
  #     - uses: actions/checkout@v2              
  #     - name: Install Salesforce CLI
