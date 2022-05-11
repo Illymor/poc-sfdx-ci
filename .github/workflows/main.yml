@@ -16,6 +16,8 @@ jobs:
         git add .
     - name: Commit files :)
       run: |
+        git config --local user.email "corentin.romilly@gmail.com"
+        git config --local user.name "illymor"
         git commit -m "Add changes" -a
     - name: Push changes
       uses: ad-m/github-push-action@master
@@ -48,5 +50,3 @@ jobs:
  #       run: 'sfdx force:apex:test:run -u my-scratch --resultformat human'
  #     - name: Delete scratch org
  #       run: 'sfdx force:org:delete -u my-scratch --noprompt'
- # git config --local user.email "corentin.romilly@gmail.com"
-# git config --local user.name "illymor"
