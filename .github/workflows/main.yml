@@ -12,7 +12,7 @@ jobs:
         fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
     - name: Create local changes
       run: |
-        echo "{username:fake@user.com}" > config/so.json
+        echo "{'username':'fake@user.com'}" > config/so.json
         git add .
     - name: Commit files :)
       run: |
@@ -31,6 +31,13 @@ jobs:
         path: ./config/so.json
     - name: Echo so.json
       run: echo "${{ steps.package.outputs.content }}"
+    - name: Read so json file
+        id: reading
+        uses: notiz-dev/github-action-json-property@release
+        with: 
+          path: './config/so.json'
+          username_path: 'username'
+    - run: echo ${{steps.reading.outputs.username}} 
  #     - uses: actions/checkout@v2              
  #     - name: Install Salesforce CLI
  #       run: |
