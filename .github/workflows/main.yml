@@ -17,8 +17,8 @@ jobs:
           git config user.email github-actions@github.com
           npm version patch -m 'update version'
           git add .
-          git commit -am "Update version"
-          git push
+          git commit -m "Update version"
+          git push origin staging
  #     - uses: actions/checkout@v2              
  #     - name: Install Salesforce CLI
  #       run: |
