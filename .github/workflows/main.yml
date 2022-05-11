@@ -12,11 +12,7 @@ jobs:
         id: step_one
         run: UPDATE='hello'
           echo "${UPDATE}" > hello.txt
-      - uses: EndBug/add-and-commit@v7
-        with:
-          message: "add hello.txt file"
-          default_author: github_actions
-          branch: staging
+      - uses: stefanzweifel/git-auto-commit-action@v4
  #     - uses: actions/checkout@v2              
  #     - name: Install Salesforce CLI
  #       run: |
