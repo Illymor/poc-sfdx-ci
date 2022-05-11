@@ -1,6 +1,7 @@
 {
-  "orgName": "Demo company",
-  "edition": "Developer",
+  "orgName": "ScratchOrgCI",
+  "edition": "Enterprise",
+  "language" : "en_US",
   "features": ["EnableSetPasswordInApi", "ContactsToMultipleAccounts"],
   "settings": {
     "lightningExperienceSettings": {
@@ -11,6 +12,12 @@
     }, 
     "accountSettings": {
       "enableRelateContactToMultipleAccounts": true
+    }, 
+    "languageSettings": {
+      "enableTranslationWorkbench": true
+    },
+    "caseSettings": {
+      "systemUserEmail": "corentin.romilly@gmail.com"
     }
   }
 }
